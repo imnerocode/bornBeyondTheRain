@@ -1,3 +1,17 @@
 [gd_scene format=3 uid="uid://b8fem6in3325a"]
 
+[ext_resource type="Script" uid="uid://b3xg8msv0b62n" path="res://Scripts/HelloWorldGodot.cs" id="1_nosqj"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ib5xd"]
+
 [node name="Node3D" type="Node3D" unique_id=1208179375]
+script = ExtResource("1_nosqj")
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=2050425849]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=984261433]
+shape = SubResource("CapsuleShape3D_ib5xd")
+
+[node name="Pivot" type="Marker3D" parent="Player" unique_id=1365751428]
+
+[node name="PlayerCamera" type="Camera3D" parent="Player/Pivot" unique_id=788439644]
